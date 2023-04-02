@@ -6,7 +6,7 @@ import MenuCard from "./MenuCard";
 const allCategories = ["all", ...new Set(data?.map((item) => item.category))];
 const Menu = () => {
   const [menuItems, setMenuItems] = useState(data);
-  const [categories, setCategories] = useState(allCategories);
+  // const [categories, setCategories] = useState(allCategories);
 
   const filterItems = (category) => {
     if (category === "all") {
@@ -15,6 +15,7 @@ const Menu = () => {
     }
     const newItems = data.filter((item) => item.category === category);
     setMenuItems(newItems);
+    console.log(newItems);
   };
 
   console.log(data);
